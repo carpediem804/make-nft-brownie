@@ -1,0 +1,10 @@
+# exclude SafeMath when calculating test coverage
+# https://eth-brownie.readthedocs.io/en/v1.10.3/config.html#exclude_paths
+reports:
+  exclude_contracts:
+    - SafeMath
+networks:
+  mainnet-fork:
+    gas_price: "auto"
+    max_fee_per_gas: 150 * 10 ** 9 # 150 Gwei as an example
+    max_priority_fee_per_gas: 2 * 10 ** 9 # 2 Gwei as an example
